@@ -25,7 +25,38 @@ body {
   width: 80%;
   margin: 0 auto;
   max-width: 1440px;
+  position: relative;
+  z-index: 1;
 }
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+.row>*{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.g-0>*{
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Grid system (12 cols)*/
+.col-3{
+  flex-basis: 25%;
+}
+.col-4{
+  flex-basis: 33.33%;
+}
+.col-6{
+  flex-basis: 50%;
+}
+.col-2{
+  flex-basis: 16.667%;
+}
+.col-1{
+  flex-basis: 8.333333%;
+}
+/* Grid system */
 /* Estilos generales */
 
 /* Home */
@@ -37,5 +68,49 @@ body {
   background-color: var(--black);
   padding: 2rem 0;
   color: var(--white);
+  position: relative;
+}
+.home::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.home__header {
+  justify-content: space-between;
+  align-items: center;
+}
+.menu a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+}
+.menu a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 2.5px;
+  background: var(--white);
+}
+.home__content{
+  padding: 10rem 0;
+}
+.home__content h2{
+  display: inline-block;
+  padding: 2.5rem 5rem 2rem 2rem;
+  border: 2px solid var(--white);
+  text-transform: uppercase;
+  font-family: var(--font-second);
+  font-size: 3.8em;
+  font-weight: 100;
 }
 /* Home */

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+body {
+  font-family: system-ui;
+}
+/* Estilos generales */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  z-index: 1;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+.row>*{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.g-0>*{
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Grid system (12 cols)*/
+.col-3{
+  flex-basis: 25%;
+}
+.col-4{
+  flex-basis: 33.33%;
+}
+.col-6{
+  flex-basis: 50%;
+}
+.col-2{
+  flex-basis: 16.667%;
+}
+.col-1{
+  flex-basis: 8.333333%;
+}
+/* Grid system */
+/* Estilos generales */
+
+.tomato{
+  background: tomato;
+  color: white;
+  padding: 1rem;
+}
+.purple{
+  background: #8e44ad;
+  color: white;
+  padding: 1rem;
+}
+.green{
+  background: #16a085;
+  color: white;
+  padding: 1rem;
+}
+.red{
+  background: #c0392b;
+  color: white;
+  padding: 1rem;
+}
+.blue{
+  background: #2980b9;
+  color: white;
+  padding: 1rem;
+}
